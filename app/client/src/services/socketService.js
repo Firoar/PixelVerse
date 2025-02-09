@@ -36,3 +36,5 @@ export const disconnectSocket = () => {
     socket = null;
   }
 };
+
+const jod = () => {};
