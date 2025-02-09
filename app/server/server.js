@@ -35,6 +35,8 @@ const corsOptions = {
   credentials: true,
 };
 
+console.log("brother : ", process.env.NODE_ENV === "production");
+
 const sessionMiddleware = session({
   secret: process.env.SESSION_SECRET || "jaiSriRam-jaiSriKrishna",
   resave: false,
