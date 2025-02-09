@@ -37,17 +37,13 @@ const getQuote = async () => {
     return;
   } else {
     const today = new Date();
-    const startOfYear = new Date(today.getFullYear(), 0, 1);
-    const diffInMillis = today - startOfYear;
-    const daysPassed = Math.floor(diffInMillis / (1000 * 60 * 60 * 24)) + 1;
 
-    console.log(import.meta.env.VITE_SERVER_URL, daysPassed);
     const response = await axios.get(
       `${import.meta.env.VITE_SERVER_URL}api/get-todays-quote`,
       {
         withCredentials: true,
         params: {
-          id: daysPassed,
+          id: today.getDate(),
         },
       }
     );

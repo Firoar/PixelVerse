@@ -474,7 +474,6 @@ export const getTodaysQuote = async (req, res) => {
 export const getTodaysJoke = async (req, res) => {
   try {
     const { id } = req.query;
-    printErrorInGoodWay("id : " + id);
     const joke = await Jokes.findByPk(id);
 
     if (!joke) {

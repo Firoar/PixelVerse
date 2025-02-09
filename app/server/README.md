@@ -17,16 +17,18 @@ npm install
 Create a `.env` file in the root directory of your project. Below is an example of what your `.env` file should look like:
 
 ```env
-DB_DIALECT=sqlite
+DB_DIALECT=""
 DB_NAME=my-db
 DB_USER=your-name
 DB_PASS=pass
 DB_HOST=./db.sqlite
 
-PORT=3000
-FRONTEND_URL=http://localhost:5173
-SESSION_SECRET=your-random-secret
+PORT=""
+FRONTEND_URL=""
+SESSION_SECRET="some-random-secret"
 NODE_ENV=development
+
+DATABASE_URL='your-postgress-utrl => not necessary if u are using sqlite'
 ```
 
 ### 3. Start the Development Server
