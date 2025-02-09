@@ -19,6 +19,9 @@ import { User } from "./models/User.js";
 import { Op } from "sequelize";
 import { giveMePeerRoomName, lookInDbById } from "./utils/db/allDbCalls.js";
 import { incomingRequest } from "./middleware/middleware.js";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 await syncTheDb();
 
@@ -26,19 +29,19 @@ const app = express();
 const server = http.createServer(app);
 
 const corsOptions = {
-  origin: "http://localhost:5173",
+  origin: process.env.FRONTEND_URL || "http://localhost:5173",
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true,
 };
 
 const sessionMiddleware = session({
-  secret: "jaiSriRam-jaiSriKrishna",
+  secret: process.env.SESSION_SECRET || "jaiSriRam-jaiSriKrishna",
   resave: false,
   saveUninitialized: false,
   cookie: {
     httpOnly: true,
-    secure: false,
+    secure: process.env.NODE_ENV === "production",
     sameSite: "strict",
     maxAge: 1000 * 60 * 60 * 24,
   },
@@ -290,6 +293,6 @@ app.get("/", (req, res) => {
   res.send("hi");
 });
 
-server.listen(3000, () => {
+server.listen(process.env.PORT || 3000, () => {
   console.log("server running on port 3000 ...");
 });
