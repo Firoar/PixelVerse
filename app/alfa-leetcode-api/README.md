@@ -3,8 +3,7 @@
 **Author:**
 [@alfaarghya](https://github.com/alfaarghya) ✒️
 
-Please visit the official repository for more details on this amazing API:  
-[Alfa Leetcode API](https://github.com/alfaarghya/alfa-leetcode-api)
+Please visit the official repository for more details on this amazing API: [Alfa Leetcode API](https://github.com/alfaarghya/alfa-leetcode-api)
 
 Special thanks to **@alfaarghya** for creating this wonderful API.
 
