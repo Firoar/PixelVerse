@@ -3,6 +3,7 @@ import { Navigate } from "react-router";
 import axios from "axios";
 
 const SERVER_URL = import.meta.env.VITE_SERVER_URL;
+
 const ProtectedRoute = ({ children }) => {
   const [isAuth, setIsAuth] = useState(null);
 
