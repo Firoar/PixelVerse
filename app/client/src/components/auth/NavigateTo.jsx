@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import classes from "./authCss/signUp.module.css";
 
 const NavigateTo = ({ isSignIn }) => {
