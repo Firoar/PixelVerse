@@ -29,3 +29,5 @@ Thumbs.db
 .idea/
 .vscode/
 *.swp
+leetCode-api.txt
+dist
