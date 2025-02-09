@@ -43,7 +43,7 @@ const sessionMiddleware = session({
   saveUninitialized: false,
   cookie: {
     httpOnly: true,
-    secure: true,// false is local, true in production
+    secure: false,// false is local, true in production
     sameSite: "strict",// strict in local, None in production
     maxAge: 1000 * 60 * 60 * 24,
   },
