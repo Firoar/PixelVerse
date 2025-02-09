@@ -2,7 +2,7 @@ import React from "react";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./css/index.css";
-import { BrowserRouter, Route, Routes, HashRouter } from "react-router";
+import { BrowserRouter, Route, Routes } from "react-router-dom"; // Use BrowserRouter here
 import App from "./App.jsx";
 import SignIn from "./components/auth/SignIn.jsx";
 import SignUp from "./components/auth/SignUp.jsx";
@@ -18,7 +18,9 @@ import JoinGrp from "./components/join-Group/JoinGrp.jsx";
 createRoot(document.getElementById("root")).render(
   <>
     <Provider store={store}>
-      <HashRouter>
+      <BrowserRouter basename="/PixelVerse">
+        {" "}
+        {/* Use BrowserRouter instead of HashRouter */}
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/signup" element={<SignUp />} />
@@ -59,7 +61,7 @@ createRoot(document.getElementById("root")).render(
 
           <Route path="/test" element={<TestComponent />} />
         </Routes>
-      </HashRouter>
+      </BrowserRouter>
     </Provider>
   </>
 );
