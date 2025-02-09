@@ -17,4 +17,7 @@ export default defineConfig({
     },
   },
   base: "/PixelVerse/",
+  build: {
+    assetsInclude: ["**/*.png", "**/*.svg", "**/*.jpg", "**/*.jpeg"], // Add your asset types here
+  },
 });
