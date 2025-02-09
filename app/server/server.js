@@ -29,7 +29,7 @@ const app = express();
 const server = http.createServer(app);
 
 const corsOptions = {
-  origin: process.env.FRONTEND_URL || "http://localhost:5173",
+  origin: "https://firoar.github.io/PixelVerse",
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true,
