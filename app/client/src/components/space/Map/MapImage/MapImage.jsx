@@ -88,7 +88,7 @@ const MapImage = () => {
   return (
     <div className={classes["map-container"]}>
       <img
-        src="/mapv3.png" // Ensure the path is correct.
+        src="/PixelVerse/mapv3.png" // Ensure the path is correct.
         className={classes["map-img"]}
         style={{
           left: `calc(16 * ${mapLeft}px)`,
