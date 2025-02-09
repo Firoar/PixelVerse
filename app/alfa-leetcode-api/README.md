@@ -1,6 +1,6 @@
-# Alfa Leetcode API for Pixel Verse
+# Alfa Leetcode API for PixelVerse
 
-**Author:**  
+**Author:** ✒️
 [@alfaarghya](https://github.com/alfaarghya)
 
 Please visit the official repository for more details on this amazing API:  
@@ -8,9 +8,9 @@ Please visit the official repository for more details on this amazing API:
 
 Special thanks to **@alfaarghya** for creating this wonderful API.
 
-## How to Set Up the API for Pixel Verse (Local Deployment)
+## How to Set Up the API for PixelVerse (Local Deployment)
 
-To set up this API locally and run it as part of the **Pixel Verse** project, follow these steps:
+To set up this API locally and run it as part of the **PixelVerse** project, follow these steps:
 
 1. **Install dependencies:**
 
