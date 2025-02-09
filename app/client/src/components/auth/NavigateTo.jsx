@@ -1,16 +1,16 @@
-import React from "react";
-import { useNavigate } from "react-router";
-import classes from "./authCss/navigateTo.module.css";
+import { Link } from "react-router-dom";
+import classes from "./authCss/signUp.module.css";
 
 const NavigateTo = ({ isSignIn }) => {
   return isSignIn ? (
     <div className={classes["navigateTo-div"]}>
-      New here? <a href="/signup">Sign Up</a>
+      New here? <Link to="/signup">Sign Up</Link>
     </div>
   ) : (
     <div className={classes["navigateTo-div"]}>
-      Already have an account? <a href="/signin">Sign In</a>
+      Already have an account? <Link to="/signin">Sign In</Link>
     </div>
   );
 };
+
 export default NavigateTo;
