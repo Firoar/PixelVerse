@@ -12,6 +12,8 @@ import { useNavigate } from "react-router";
 
 const SERVER_URL = import.meta.env.VITE_SERVER_URL;
 
+console.log(SERVER_URL);
+
 const SubmitButton = ({ isSignIn }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
