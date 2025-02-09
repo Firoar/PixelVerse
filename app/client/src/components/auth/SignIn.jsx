@@ -8,7 +8,7 @@ import { useNavigate } from "react-router";
 import classes from "./authCss/signIn.module.css";
 import NavigateTo from "./NavigateTo";
 
-const SERVER_URL = "http://localhost:3000";
+const SERVER_URL = import.meta.env.VITE_SERVER_URL;
 
 const SignIn = () => {
   const navigate = useNavigate();
@@ -16,7 +16,7 @@ const SignIn = () => {
   useEffect(() => {
     const checkIsAuth = async () => {
       try {
-        const response = await axios.get(`${SERVER_URL}/api/protected`, {
+        const response = await axios.get(`${SERVER_URL}api/protected`, {
           withCredentials: true,
         });
 
