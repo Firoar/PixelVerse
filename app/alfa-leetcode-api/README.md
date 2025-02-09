@@ -1,7 +1,7 @@
 # Alfa Leetcode API for PixelVerse
 
-**Author:** ✒️
-[@alfaarghya](https://github.com/alfaarghya)
+**Author:**
+[@alfaarghya](https://github.com/alfaarghya) ✒️
 
 Please visit the official repository for more details on this amazing API:  
 [Alfa Leetcode API](https://github.com/alfaarghya/alfa-leetcode-api)
