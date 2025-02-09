@@ -1,4 +1,4 @@
-# Project Setup
+# Server Setup
 
 ## How to Set Up the Server
 
