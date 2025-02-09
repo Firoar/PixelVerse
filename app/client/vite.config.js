@@ -16,4 +16,5 @@ export default defineConfig({
       crypto: "crypto-browserify",
     },
   },
+  base: "/PixelVerse/",
 });
