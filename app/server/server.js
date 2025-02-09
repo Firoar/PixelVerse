@@ -41,10 +41,11 @@ const sessionMiddleware = session({
   secret: process.env.SESSION_SECRET || "jaiSriRam-jaiSriKrishna",
   resave: false,
   saveUninitialized: false,
+  proxy: true, 
   cookie: {
     httpOnly: true,
-    secure: false,// false is local, true in production
-    sameSite: "strict",// strict in local, None in production
+    secure: true,// false is local, true in production
+    sameSite: "None",// strict in local, None in production
     maxAge: 1000 * 60 * 60 * 24,
   },
 });
