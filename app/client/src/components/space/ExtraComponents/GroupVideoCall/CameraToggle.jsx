@@ -13,11 +13,10 @@ const CameraToggle = () => {
   return (
     <div className={classes["toggleDiv"]}>
       <img
-        src={
-          import.meta.env.BASE_URL + isLocalVideoDisabled
-            ? "/cameraOff.svg"
-            : "/camera.svg"
+        src={` ${import.meta.env.BASE_URL}${
+          isLocalVideoDisabled ? "/cameraOff.svg" : "/camera.svg"
         }
+         `}
         onClick={handleCameraButtonPressed}
       />
     </div>
