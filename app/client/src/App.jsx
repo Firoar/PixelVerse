@@ -3,20 +3,23 @@ import { useNavigate } from "react-router";
 import "./css/App.css";
 import classes from "./css/App.module.css";
 import { notify } from "./utils/toasts.js";
+import { ToastContainer } from "react-toastify";
 
 function NotifyWindows() {
   const handleClickedIt = () => {
+    console.log("clicked");
     notify(
-      "Windows User (recommended): Change your display setting. Go to Settings > Display > Make everything Bigger > 100%."
+      "Windows User (recommended): Change your display setting. Go to Settings > Display > Make everything Bigger > 100%.",
+      "warn"
     );
   };
 
   return (
-    <div>
-      Windows Users:{" "}
-      <span onClick={handleClickedIt}>
+    <div onClick={handleClickedIt} className={classes["win-notify-div"]}>
+      Windows Users :{" "}
+      <span>
         <img
-          src={`${import.meta.env.BASE_URL}/caution.png`}
+          src={`${import.meta.env.BASE_URL}/caution-1.png`}
           alt="Caution Icon"
         />
       </span>
@@ -36,12 +39,11 @@ function App() {
 
   return (
     <>
-      {userOs === "windows" &&
-        alert("Windows User: Adjust your display settings")}
       <div className={classes["app-div"]}>
         <button onClick={() => navigate("/signup")}>Sign Up</button>
         <button onClick={() => navigate("/signin")}>Sign In</button>
         {userOs === "windows" && <NotifyWindows />}
+        <ToastContainer />
       </div>
     </>
   );
