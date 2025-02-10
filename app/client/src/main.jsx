@@ -18,7 +18,7 @@ import JoinGrp from "./components/join-Group/JoinGrp.jsx";
 createRoot(document.getElementById("root")).render(
   <>
     <Provider store={store}>
-      <BrowserRouter basename="/PixelVerse">
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/signup" element={<SignUp />} />
