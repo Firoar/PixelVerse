@@ -35,17 +35,18 @@ const corsOptions = {
   credentials: true,
 };
 
-console.log("brother : ", process.env.NODE_ENV === "production");
+const isProduction = process.env.NODE_ENV === "production";
 
 const sessionMiddleware = session({
   secret: process.env.SESSION_SECRET || "jaiSriRam-jaiSriKrishna",
   resave: false,
   saveUninitialized: false,
-  proxy: true, 
+  proxy: isProduction,
+
   cookie: {
     httpOnly: true,
-    secure: true,// false is local, true in production
-    sameSite: "None",// strict in local, None in production
+    secure: isProduction,
+    sameSite: isProduction ? "None" : "Strict",
     maxAge: 1000 * 60 * 60 * 24,
   },
 });
