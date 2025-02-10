@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 import "./css/App.css";
 import classes from "./css/App.module.css";
 import { notify } from "./utils/toasts.js";
