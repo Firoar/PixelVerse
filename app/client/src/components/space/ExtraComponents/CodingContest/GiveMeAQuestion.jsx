@@ -18,7 +18,7 @@ const GiveMeAQuestion = () => {
   };
   const clickedGiveMeAQuestion = async () => {
     try {
-      if (currentQuestion) setLoading(true);
+      setLoading(true);
 
       let URL = `${import.meta.env.VITE_LEETCODE_URL}problems`;
 
