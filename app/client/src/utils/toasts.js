@@ -9,6 +9,10 @@ export const notify = (message, type) => {
     toast.error(message, {
       position: "top-center",
     });
+  } else if (type === "warn") {
+    toast.warn(message, {
+      position: "top-center",
+    });
   } else {
     toast(message, {
       position: "top-center",
