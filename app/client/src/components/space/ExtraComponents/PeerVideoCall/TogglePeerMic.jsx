@@ -12,8 +12,11 @@ const TogglePeerMic = ({ localStream }) => {
   return (
     <div className={classes["toggleDiv"]}>
       <img
-        src={isMicMuted ? "./micOff.svg" : "./mic.svg"}
+        src={`${import.meta.env.BASE_URL}${
+          isMicMuted ? "/micOff.svg" : "/mic.svg"
+        }`}
         onClick={handleMicButtonPressed}
+        alt="Toggle Microphone"
       />
     </div>
   );

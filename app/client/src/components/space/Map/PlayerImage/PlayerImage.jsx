@@ -19,7 +19,9 @@ const PlayerImage = () => {
         }}
       >
         <img
-          src={`./${selectedGroup.myCharColor.toLowerCase()}-ball.png`}
+          src={`${
+            import.meta.env.BASE_URL
+          }/${selectedGroup.myCharColor.toLowerCase()}-ball.png`}
           className={classes["map-ball-img"]}
         />
         <p className={classes[""]}>{playerName}</p>

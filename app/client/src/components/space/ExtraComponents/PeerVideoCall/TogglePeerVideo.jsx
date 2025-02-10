@@ -14,7 +14,9 @@ const TogglePeerVideo = ({ localStream }) => {
   return (
     <div className={classes["toggleDiv"]}>
       <img
-        src={isLocalVideoDisabled ? "./cameraOff.svg" : "./camera.svg"}
+        src={` ${import.meta.env.BASE_URL}${
+          isLocalVideoDisabled ? "/cameraOff.svg" : "/camera.svg"
+        }`}
         onClick={handleCameraButtonPressed}
       />
     </div>

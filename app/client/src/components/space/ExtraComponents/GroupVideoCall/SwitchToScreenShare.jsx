@@ -46,7 +46,7 @@ const SwitchToScreenShare = () => {
       }`}
     >
       <img
-        src={"switchToScreenSharing.svg"}
+        src={`${import.meta.env.BASE_URL}${"/switchToScreenSharing.svg"}`}
         onClick={handleScreenShareToggle}
         alt="Switch to Screen Sharing"
       />

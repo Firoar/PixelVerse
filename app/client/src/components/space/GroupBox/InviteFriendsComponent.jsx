@@ -33,7 +33,7 @@ const InviteFriendsComponent = ({ group }) => {
     >
       <img
         className={classes["groupDiv-inviteImg"]}
-        src="./invite-friends-image.png"
+        src={import.meta.env.BASE_URL + "/invite-friends-image.png"}
         alt="invite"
       />
     </div>

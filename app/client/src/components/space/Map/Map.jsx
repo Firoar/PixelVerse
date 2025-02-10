@@ -185,7 +185,9 @@ const Map = () => {
 
             return (
               <ParticipantsImage
-                src={`./${participantColor?.toLowerCase()}-ball.png`}
+                src={`${
+                  import.meta.env.BASE_URL
+                }/${participantColor?.toLowerCase()}-ball.png`}
                 pos={coordinates}
                 name={participantName}
                 mapPos={[mapLeft, mapTop]}
