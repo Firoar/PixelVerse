@@ -20,7 +20,7 @@ const GiveMeYourUserName = ({ setChangeUserName }) => {
           withCredentials: true,
         }
       );
-      console.log(response);
+
       if (response.data.ok) {
         setChangeUserName(false);
       }
